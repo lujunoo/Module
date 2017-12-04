@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Parallux-响应式网页滚动视觉差特效</title>
+	<script type="text/javascript" src="dist/custom.modernizr.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jq22-demo.css">
+	<link rel="stylesheet" href="dist/normalize.min.css">
+	<link rel="stylesheet" href="dist/jquery.parallux.min.css">
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/demo3.css">
+	<!--[if IE]>
+		<script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="jq22-container">
+		<header class="jq22-header">
+			<h1>Parallux-响应式网页滚动视觉差特效 <span>Responsive Any Content Parallax Plugin With jQuery</span></h1>
+			
+			<div class="jq22-demo center">
+			  <a href="index.html">DEMO1</a>
+			  <a href="index2.html">DEMO2</a>
+			  <a href="index3.html" class="current">DEMO3</a>
+			</div>
+		</header>
+		<!-- Parallax item -->
+			<div class="parallux">
+
+				<!-- Background layer -->
+				<div class="parallux-bg fixed">
+					<!-- Div for using translate3d -->
+					<div class="parallux-inner dark bg-header" >
+						<!-- Here you can insert any HTML you want -->
+						<div class="text">
+							<h2>Lorem ipsum dolor</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, enim. Voluptas, deleniti, eaque dolore, expedita delectus ab accusamus sint quas voluptates</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Parallax foreground with the same size and transparent -->
+
+			</div>
+			<div class="wrapper">
+				<section class="separator">
+					<h1>hello Dear</h1>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					
+				</section>
+			</div>
+		
+	</div>
+	
+	<script src="http://www.jq22.com/jquery/2.1.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+	<script src="src/jquery.parallux.js"></script>
+	<script>
+		$(function() {
+			$(".parallux").parallux(
+				{
+					fullHeight: false,
+					onMobile: 'fixed'
+				}
+			);
+		});
+	</script>
+</body>
+</html>

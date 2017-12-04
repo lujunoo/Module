@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="css/smoothslides.theme.css">
+<style>
+	body{background-color: #171717}
+	h1{ text-align: center; font-size: 16px; color: rgba(91,91,91,1.00); }
+	.mm{ margin-left: auto; margin-right: auto; }
+</style>
+</head>
+<body>
+
+<div class="smoothslides mm" id="sucaihuo"> 
+	<img src="images/1.jpg" alt="Picture information 1"> 
+	<img src="images/2.jpg" alt="Picture information 2"> 
+	<img src="images/3.jpg" alt="Picture information 3"> 
+	<img src="images/4.jpg" alt="Picture information 4"> 
+</div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="js/smoothslides-2.1.0.min.js"></script> 
+<script>
+	$(window).load(function() {
+		$('#sucaihuo').smoothSlides();
+	});
+</script>
+</body>
+</html>

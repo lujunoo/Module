@@ -1,0 +1,388 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>星星-jq22.com</title>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<style>
+		#WD-Title {
+				padding-left: 2.5%;
+				padding-top: 2.5%;
+				padding-bottom: 2.5%;
+				margin-right: 77%;
+				margin-bottom: 5%;
+				background-color: #333333;
+				color: white;
+				font-family: monospace;
+				text-transform: uppercase;
+			}
+			
+			#topstuff1 {
+				margin-top: -10%;
+				margin-left: 25%;
+				margin-right: 40%;
+				background-color: #737373;
+			}
+			
+			#topstuff2 {
+				margin-top: -17%;
+				margin-left: 30%;
+				margin-right: 35%;
+				background-color: #000099;
+			}
+			
+			#topstuff3 {
+				margin-top: -7%;
+				margin-right: 15%;
+				margin-left: 50%;
+				background-color: #333333;
+			}
+			
+			#topstuff4 {
+				margin-top: -6%;
+				margin-right: 65%;
+				margin-left: 1%;
+				background-color: #000066;
+			}
+			
+			.topstuff1-2 {
+				padding-top: 6.25%;
+				padding-bottom: 5%;
+				opacity: 0.7;
+			}
+			
+			.topstuff3-4 {
+				padding-top: 6%;
+				padding-bottom: 5%;
+				opacity: 0.7;
+			}
+			
+			.all-top-stuff {
+				position: relative;
+				z-index: 1;
+			}
+			
+			html,
+			body {
+				background-color: #000;
+			}
+			
+			ul {
+				display: flex;
+				justify-content: space-around;
+				width: 100%;
+				padding-left: 0;
+			}
+			
+			li {
+				list-style: none;
+				font-size: 2%;
+				font-family: monospace;
+				font-weight: 300;
+				text-transform: uppercase;
+				letter-spacing: 1%;
+			}
+			
+			a {
+				color: black;
+				text-decoration: none;
+				position: relative;
+			}
+			
+			a:hover:before {
+				clip: rect(0, 190px, 190px, 0);
+			}
+			
+			a:before {
+				position: absolute;
+				left: 0;
+				top: 0;
+				content: attr(data-content);
+				display: inline-block;
+				color: #6699ff;
+				width: 100%;
+				clip: rect(0, 0, 190px, 0);
+				-webkit-transition: clip cubic-bezier(0.25, 0.46, 0.45, 0.94) 500ms;
+				transition: clip cubic-bezier(0.25, 0.46, 0.45, 0.94) 500ms;
+			}
+			
+			a:active {
+				text-shadow: 4px 4px 5px black;
+			}
+			
+			.buttons {
+				margin-top: 10%;
+				background-color: white;
+				margin-left: 10%;
+				margin-right: 10%;
+				padding-top: 1%;
+				padding-bottom: 1%;
+			}
+			
+			.img {
+				margin-bottom: 3.5%;
+				background-color: black;
+				border: 4px solid #1a001a;
+				float: left;
+				width: 13%;
+				height: 200px;
+			}
+			
+			.img:hover {
+				border: 4px solid #777;
+			}
+			
+			.img img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.desc {
+				padding: 6%;
+				width: 87%;
+				text-align: center;
+				background-color: black;
+				color: white;
+				position: relative;
+				z-index: 1;
+				margin-top: 0px;
+				border: 4px solid #1a001a;
+			}
+			
+			.image-gallery {
+				margin-left: 3%;
+				margin-top: 3%;
+			}
+			
+			canvas {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		#desc1 {
+			padding-bottom: 10%;
+		}
+		#desc2 {
+			padding-bottom: 12%;
+		}
+		#desc3 {
+			padding-bottom: 12%;
+		}
+		#desc4 {
+			padding-bottom: 12%;
+		}
+		#desc5 {
+			padding-bottom: 12%;
+		}
+		#desc6 {
+			padding-bottom: 12%;
+		}
+		#desc7 {
+			padding-bottom: 12%;
+		}
+		/* Search bar styling: */
+		#tfnewsearch {
+			float: right;
+			margin-top: -180px;
+			padding: 20px;
+		}
+		.tftextinput {
+			margin: 0;
+			padding: 5px 20px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			border: 1px solid blue;
+			border-right: 0px;
+			border-top-left-radius: 5px 5px;
+			border-bottom-left-radius: 5px 5px;
+		}
+		.tfbutton {
+			margin: 0px;
+			padding: 5px 20px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			outline: none;
+			cursor: pointer;
+			text-align: center;
+			text-decoration: none;
+			color: #ffffff;
+			border: solid 1px blue;
+			border-right: 1px;
+			background: blue;
+			background: -webkit-gradient(linear, left top, left bottom, from(purple), to(black));
+			background: -moz-linear-gradient(top, yellow, green);
+			border-top-right-radius: 5px 5px;
+			border-bottom-right-radius: 5px 5px;
+		}
+		.tfbutton:hover {
+			text-decoration: none;
+			background: #00678e;
+			background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+			background: -moz-linear-gradient(top, #0095cc, #00678e);
+		}
+		/* Fixes submit button height problem in Firefox */
+		.tfbutton::-moz-focus-inner {
+			border: 0;
+		}
+		.tfclear {
+			clear: both;
+		}
+		/* more search bar coding */
+		#tfheader {
+			background-color: #c3dfef;
+		}
+		#tfnewsearch {
+			float: right;
+			padding: 20px;
+		}
+		.tftextinput2 {
+			margin: 0;
+			padding: 5px 15px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			color: #666;
+			border: 1px solid #0076a3;
+			border-right: 0px;
+			border-top-left-radius: 5px 5px;
+			border-bottom-left-radius: 5px 5px;
+		}
+		.tfbutton2 {
+			margin: 0;
+			padding: 5px 7px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			font-weight: bold;
+			outline: none;
+			cursor: pointer;
+			text-align: center;
+			text-decoration: none;
+			color: #ffffff;
+			border: solid 1px #0076a3;
+			border-right: 0px;
+			background: #0095cd;
+			background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+			background: -moz-linear-gradient(top, #00adee, #0078a5);
+			border-top-right-radius: 5px 5px;
+			border-bottom-right-radius: 5px 5px;
+		}
+		.tfbutton2:hover {
+			text-decoration: none;
+			background: #007ead;
+			background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+			background: -moz-linear-gradient(top, #0095cc, #00678e);
+		}
+		/* Fixes submit button height problem in Firefox */
+		.tfbutton2::-moz-focus-inner {
+			border: 0;
+		}
+		.tfclear {
+			clear: both;
+		}
+		</style>
+	</head>
+
+	<body>
+		<canvas id=c></canvas>
+		<script>
+			var w = c.width = window.innerWidth,
+				h = c.height = window.innerHeight,
+				ctx = c.getContext('2d'),
+
+				size = [5, 20], //[min, max]
+				shineDir = [.01, .05],
+				angSpeed = [.02, .02],
+
+				stars = [],
+				frame = (Math.random() * 360) | 0,
+				pentaRadiant = Math.PI * 2 / 5;
+
+			function rand(ar) {
+				return Math.random() * (ar[1] - ar[0]) + ar[0];
+			}
+
+			function Star() {
+				this.size = rand(size);
+				this.x = Math.random() * w;
+				this.y = -this.size * 2;
+				this.vy = this.size / 15;
+				this.vx = Math.random() * 6 - 3;
+				this.ay = this.size / 5000;
+				this.shine = 0;
+				this.shineDir = rand(shineDir);
+				this.color = 'hsla(hue, 80%, brightness%, .15)'.replace('hue', frame % 360);
+				this.rot = Math.random() * 2 * Math.PI;
+				this.omega = rand(angSpeed);
+				if(Math.random() < .5) this.omega *= -1;
+			}
+			Star.prototype.use = function() {
+				this.x += this.vx;
+				this.y += this.vy += this.ay;
+
+				var newShine = this.shine + this.shineDir;
+				if(newShine < 0 || newShine > 1) this.shineDir *= -1
+				else this.shine = newShine;
+				this.rot += this.omega;
+
+				ctx.translate(this.x, this.y);
+				ctx.rotate(this.rot);
+				ctx.fillStyle = this.color.replace('brightness', (2.5 + this.shine / 2) * 1000);
+				ctx.beginPath();
+				ctx.moveTo(this.size, 0);
+
+				for(var i = 0; i < 5; ++i) {
+					var rad = pentaRadiant * i,
+						halfRad = rad + pentaRadiant / 8;
+					ctx.lineTo(Math.cos(rad) * this.size, Math.sin(rad) * this.size);
+					ctx.lineTo(Math.cos(halfRad) * this.size / 2, Math.sin(halfRad) * this.size / 2);
+				}
+				ctx.closePath();
+
+				ctx.fill();
+
+				ctx.rotate(-this.rot);
+				ctx.translate(-this.x, -this.y);
+			}
+
+			function anim() {
+				window.requestAnimationFrame(anim);
+
+				++frame;
+
+				ctx.globalCompositeOperation = 'destination-out';
+				ctx.fillStyle = 'rgba(0, 0, 0, .1)';
+				ctx.fillRect(0, 0, w, h);
+				ctx.globalCompositeOperation = 'lighter';
+
+				if(Math.random() < .3) stars.push(new Star);
+
+				for(var s = 0; s < stars.length; ++s) {
+					stars[s].use();
+
+					if(stars[s].x + stars[s].size < 0) {
+						stars.splice(s, 6);
+						--s;
+					}
+				}
+			}
+			anim();
+			object.style.zIndex = "-1"
+
+			//search bar coding
+			window.onload = function() {
+				//Get submit button
+				var submitbutton = document.getElementById("tfq");
+				//Add listener to submit button
+				if(submitbutton.addEventListener) {
+					submitbutton.addEventListener("click", function() {
+						if(submitbutton.value == 'Search') { //Customize this text string to whatever you want
+							submitbutton.value = '';
+						}
+					});
+				}
+			}
+		</script>
+	</body>
+
+</html>

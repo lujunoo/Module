@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery hover鼠标悬停遮罩显示</title>
+</head>
+<body>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+/*审核大神给过吧,我都投了好多稿了,a标签都帮你们改了*/
+/* case */
+.case{margin:0 auto;width:692px;}
+.case li{float:left;display:inline;margin-right:22px;margin-left:22px;width:302px;height:215px; background:url(images/bg_case_f.png) center bottom no-repeat;position:relative;}
+.case li .case_w{display:block;width:262px;height:145px;padding:20px;background:url(images/bg_case.png) no-repeat;position:absolute;bottom:14px;left:0px;}
+.case li .case_w .fire{background:#000;opacity:0.5;filter:alpha(opacity=50);position:absolute;top:20px;left:20px;width:262px;height:148px;z-index:2;display:none; text-align:center; }
+.case li .case_w  .x,.case li .case_w  .y{width:61px;height:61px;top:60px;position:absolute;z-index:3;display:none;}
+.case li .case_w  .x{background:url(images/zoom-icon.png); left: 50px;}
+.case li .case_w  .y{background:url(images/readmore-icon.png);right:50px;}
+</style>
+
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+
+
+<ul class="case">
+	<li>
+		<div class="case_w">
+			<img src="images/21-46-0275a7c2b6abaf0288041c4212a2278326459.jpg" />
+			<div class="fire"></div>
+			<a href="#" class="x"></a>
+			<a href="#" class="y"></a>
+		</div>
+	</li>
+	<li>
+		<div class="case_w">
+			<img src="images/21-46-0275a7c2b6abaf0288041c4212a2278326459.jpg" />
+			<div class="fire"></div>
+			<a href="#" class="x"></a>
+			<a href="#" class="y"></a>
+		</div>
+	</li>
+	<li>
+		<div class="case_w">
+			<img src="images/21-46-0275a7c2b6abaf0288041c4212a2278326459.jpg" />
+			<div class="fire"></div>
+			<a href="#" class="x"></a>
+			<a href="#" class="y"></a>
+		</div>
+	</li>
+	<li>
+		<div class="case_w">
+			<img src="images/21-46-0275a7c2b6abaf0288041c4212a2278326459.jpg" />
+			<div class="fire"></div>
+			<a href="#" class="x"></a>
+			<a href="#" class="y"></a>
+		</div>
+	</li>
+</ul>
+
+
+<script type="text/javascript">
+$(function(){
+	$(".case li").hover(function(){
+		$('.case_w',this).stop().animate({"bottom":"30px"},400);	
+		$(".x",this).stop().css({'left':'50px'}).animate({'left':"80px"},400).show();
+		$(".y",this).stop().css({'right':'50px'}).animate({'right':"80px"},400).show();
+		$('.fire',this).show();
+	},function(){
+		$('.case_w',this).stop().animate({"bottom":"14px"},400);
+		$('.fire, .x, .y',this).hide();
+	});	
+});
+</script>
+
+</body>
+</html>

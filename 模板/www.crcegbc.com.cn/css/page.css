@@ -1,0 +1,30 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.page{
+	padding:0px 0 60px;
+	font-size:12px;
+	font-weight:bold;
+	line-height:22px;
+	text-align:center;
+	clear:both;
+}
+.page a{
+	text-decoration:none;
+	color:#0075c2;
+	background:#fff;
+	border:1px solid #CCCCCC;
+	padding:3px 6px;
+	padding-bottom:2px;
+	margin-right:3px
+}
+.page a.active{
+	background:#0075c2;
+	border:1px solid #0075c2;
+	color:#fff
+}
+.page a:hover{
+	text-decoration:none;
+	color:#fff;
+	background:#0075c2;
+	border:1px solid #0075c2
+}
